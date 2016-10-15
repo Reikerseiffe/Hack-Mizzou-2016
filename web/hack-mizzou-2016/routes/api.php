@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+
+Route::post('/upvote', "ApiController@upvote");
+Route::post('/downvote', "ApiController@downvote");
+Route::post('/getPlaylist', "ApiController@getPlaylist");
+Route::post('/addSong', "ApiController@addSong");
+Route::post('/startParty', "ApiController@startParty");
