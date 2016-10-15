@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateActivity" />
+        <activity android:name=".EnterActivity" />
+        <activity android:name=".PlaylistActivity"></activity>
     </application>
 
 </manifest>
