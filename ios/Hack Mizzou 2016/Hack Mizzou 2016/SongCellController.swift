@@ -15,6 +15,11 @@ class SongCellController: UITableViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var downButton: UIButton!
     @IBOutlet weak var upButton: UIButton!
+    
+    let webWorker = WebWorker()
+    
+    var index:Int = 0
+    var roomID:Int = 0
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,11 +36,23 @@ class SongCellController: UITableViewCell {
     @IBAction func voteDown(sender: AnyObject) {
         //send songID and downvote to API
         print("I downvoted")
+        webWorker.downvote(roomID, index: index + 1)
+        
+        sleep(1)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
+
     }
     
     @IBAction func voteUp(sender: AnyObject) {
         //send songID and upvote to API
         print("I upvoted")
+        
+        webWorker.upvote(roomID, index: index + 1)
+        
+        sleep(1)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
     }
     
 

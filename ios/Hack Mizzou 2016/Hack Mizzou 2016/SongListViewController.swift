@@ -17,68 +17,82 @@ class SongListViewController: UIViewController {
     @IBOutlet weak var currentArtwork: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    var dataArray:NSArray = []
+    let webWorker = WebWorker()
     
+    var songArray:NSArray = []
+    var roomID:Int = 0
     
-    
-    let fakeData: NSDictionary = [
-        "currentSong" : "Roses",
-        "currentArtist" : "The Chain Smokers",
-        "currentScore" : 42,
-        "currentArtwork" : "http://www.sweatshirtxy.com/sites/default/files/styles/large/public/hoodie-images/dj-band-chainsmokers-hoodie-for-teens-xxxl-fleece-roses-album-sweatshirt-hood87938.jpg?itok=spG629cm"
-    ]
-    
-    let fakeData2: NSDictionary = [
-        "currentSong" : "Roses",
-        "currentArtist" : "The Chain Smokers",
-        "currentScore" : 42,
-        "currentArtwork" : "https://www.google.com/search?q=album+cover+roses&espv=2&biw=1920&bih=1103&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi66Y-h5tvPAhWk24MKHaq9AxwQ_AUIBigB#imgrc=YQeLV0hH6mpJfM%3A"
-    ]
-    
-    let fakeData3: NSDictionary = [
-        "currentSong" : "Roses",
-        "currentArtist" : "The Chain Smokers",
-        "currentScore" : 35,
-        "currentArtwork" : "https://www.google.com/search?q=album+cover+roses&espv=2&biw=1920&bih=1103&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi66Y-h5tvPAhWk24MKHaq9AxwQ_AUIBigB#imgrc=YQeLV0hH6mpJfM%3A"
-    ]
-    
-    let fakeData4: NSDictionary = [
-        "currentSong" : "Roses",
-        "currentArtist" : "The Chain Smokers",
-        "currentScore" : 52,
-        "currentArtwork" : "https://www.google.com/search?q=album+cover+roses&espv=2&biw=1920&bih=1103&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi66Y-h5tvPAhWk24MKHaq9AxwQ_AUIBigB#imgrc=YQeLV0hH6mpJfM%3A"
-    ]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*if let url = NSURL(string:String(fakeData["currentArtwork"])) {
-            if let data = NSData(contentsOfURL: url) {
-                currentArtwork.image = UIImage(data: data)
-            }
-        }*/
+        print("After Segue")
+        print(songArray)
         
-        let data = NSData(contentsOfURL: NSURL(string: "https://i.scdn.co/image/f9f7089f2c94487175fcbc5f883fcd2c5037c9cd")!)
-        print(data);
+        let data = NSData(contentsOfURL: NSURL(string: (songArray[0]["vcCoverArt"] as! String))!)
+        //print(data);
         if let data = data{
             currentArtwork.image = UIImage(data: data)
         }
         
         
-        
-        dataArray = [fakeData2, fakeData3, fakeData4]
-        
-        currentSongLabel.text = fakeData["currentSong"] as? String
-        currentArtistLabel.text = fakeData["currentArtist"] as? String
-        if let score:String = String(fakeData["currentScore"]!){
+        currentSongLabel.text = songArray[0]["vcName"] as? String
+        currentArtistLabel.text = songArray[0]["vcArtist"] as? String
+        if let score:String = String(songArray[0]["nRepScore"]!!){
             currentScoreLabel.text = "Score: " + score
         }
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(SongListViewController.reloadData), name:UIApplicationWillEnterForegroundNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SongListViewController.loadList(_:)),name:"load", object: nil)
         
 
         // Do any additional setup after loading the view.
     }
+    
+    func loadList(notification: NSNotification){
+        //load data here
+        reloadData()
+    }
+    
+    func reloadData(){
+        print("Will reload data")
+        
+        print(roomID)
+        
+        songArray = []
+        
+        webWorker.joinRoom(roomID){
+            (result, error) in
+            
+            print("Result: ")
+            print(result!)
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.songArray = result!
+                self.tableView.reloadData()
+            })
+            //self.songArray = result!
+            //self.tableView.reloadData()
+        }
+        
+        
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        //print("looking at the page")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print("looking at the page")
+        
+        
+        
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -93,7 +107,8 @@ class SongListViewController: UIViewController {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dataArray.count
+        let num = songArray.count - 1
+        return num
     }
     
     
@@ -101,16 +116,19 @@ class SongListViewController: UIViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("songCell", forIndexPath: indexPath) as! SongCellController
         
         //cell.configureWithValue(UIColor.clearColor())
-        let data = dataArray[indexPath.row]
+        let data = songArray[indexPath.row + 1]
         
+        cell.index = indexPath.row
+        cell.roomID = roomID
         
-        cell.songLabel.text = data["currentSong"] as? String
-        cell.artistLabel.text = data["currentArtist"] as? String
+        cell.songLabel.text = data["vcName"] as? String
+        cell.artistLabel.text = data["vcArtist"] as? String
+        cell.scoreLabel.text = "Score: " + String(data["nRepScore"]!!)
         
-        if let score:String = String(data["currentScore"]!!){
+        /*if let score:String = String(data["currentScore"]!!){
             print(score)
             cell.scoreLabel.text = score
-        }
+        }*/
 
 
         //cell.scoreLabel.text = dataArray[indexPath.row][]

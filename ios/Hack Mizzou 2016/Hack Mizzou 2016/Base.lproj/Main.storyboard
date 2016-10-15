@@ -214,6 +214,9 @@
                                                         <constraint firstAttribute="width" constant="60" id="kCe-DC-4Xj"/>
                                                     </constraints>
                                                     <state key="normal" title="UP"/>
+                                                    <connections>
+                                                        <action selector="voteUp:" destination="uEA-rO-LVd" eventType="touchUpInside" id="mLc-i1-G3w"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aT-Gx-fCB">
                                                     <rect key="frame" x="520" y="54" width="60" height="40"/>
@@ -223,6 +226,9 @@
                                                         <constraint firstAttribute="height" constant="40" id="aks-Z4-W0L"/>
                                                     </constraints>
                                                     <state key="normal" title="DOWN"/>
+                                                    <connections>
+                                                        <action selector="voteDown:" destination="uEA-rO-LVd" eventType="touchUpInside" id="XXx-4u-RhL"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -240,8 +246,10 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artistLabel" destination="Mqk-lp-Eod" id="qvu-9Q-nFo"/>
+                                            <outlet property="downButton" destination="1aT-Gx-fCB" id="F7G-bW-w93"/>
                                             <outlet property="scoreLabel" destination="KJc-zC-ZbZ" id="R16-OV-eei"/>
                                             <outlet property="songLabel" destination="hmg-kA-KZL" id="9z8-4j-7Zd"/>
+                                            <outlet property="upButton" destination="6PF-4M-YwD" id="1Ui-fP-Ari"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -308,11 +316,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Submit Room Name"/>
                                 <connections>
-                                    <segue destination="TO1-A3-mx4" kind="show" id="wp0-ut-hfB"/>
+                                    <action selector="joinRoom:" destination="lmz-bH-yee" eventType="touchUpInside" id="gUl-KM-DqZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="GE6-gL-z8e" firstAttribute="centerX" secondItem="NLa-4h-GEe" secondAttribute="centerX" id="0lr-0l-7C3"/>
                             <constraint firstItem="oqg-sj-0IL" firstAttribute="centerX" secondItem="NLa-4h-GEe" secondAttribute="centerX" id="V45-Tk-acu"/>
@@ -321,14 +330,26 @@
                             <constraint firstItem="88a-dS-J6A" firstAttribute="centerX" secondItem="NLa-4h-GEe" secondAttribute="centerX" id="lG7-vc-LeV"/>
                             <constraint firstItem="rRd-gk-Ea5" firstAttribute="top" secondItem="GE6-gL-z8e" secondAttribute="bottom" constant="50" id="mv4-G3-pC2"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="alh-cV-9LQ" appends="YES" id="HeA-CZ-QPp"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="roomInput" destination="88a-dS-J6A" id="iRQ-MG-RH0"/>
+                        <segue destination="TO1-A3-mx4" kind="show" identifier="joinedRoom" id="COR-Fs-OuU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Dr-kf-uPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="alh-cV-9LQ">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="lmz-bH-yee" id="KFU-dS-odl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1645" y="981"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wp0-ut-hfB"/>
+        <segue reference="COR-Fs-OuU"/>
     </inferredMetricsTieBreakers>
 </document>
