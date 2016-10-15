@@ -6,14 +6,14 @@
     <br>
     <br>
     
-    <div class="row">
-        <a class="col-md-2 col-md-offset-5 btnColor btn" href="index">Host</a>
+    <div style="text-align:center" class="row">
+        <a style="width:15%;" class="btnColor btn" href="index">Host</a>
     </div>
     
     <br>
     
-    <div class="row">
-        <a class="col-md-2 col-md-offset-5 btnColor btn" href="joinRoom">Join</a>
+    <div style="text-align:center" class="row">
+        <a style="width:15%;" class="btnColor btn" href="joinRoom">Join</a>
     </div>
 
 </div>

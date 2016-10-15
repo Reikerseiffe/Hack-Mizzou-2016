@@ -7,12 +7,12 @@
 
     <br>
 
-    <form action="joinRoom" method="post">
+    <form style="text-align:center" action="joinRoom" method="post">
        {{csrf_field()}}
-        <input type="text" name="vcRoomName" class="col-md-2 col-md-offset-5">
+        <input type="text" name="vcRoomName">
         <br>
         <br>
-        <button type="submit" class="col-md-2 col-md-offset-5 btnColor btn">Join Room</button>
+        <button type="submit" class="btnColor btn">Join Room</button>
     </form>
 
     <br>
