@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class JoinActivity extends AppCompatActivity {
 
@@ -12,7 +13,6 @@ public class JoinActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
-
 
         Button joinButton = (Button) findViewById(R.id.join_button);
         joinButton.setOnClickListener(new View.OnClickListener(){
