@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".CreateActivity" />
         <activity android:name=".EnterActivity" />
-        <activity android:name=".PlaylistActivity"></activity>
+        <activity android:name=".PlaylistActivity" />
+        <activity android:name=".SearchActivity"></activity>
     </application>
 
 </manifest>

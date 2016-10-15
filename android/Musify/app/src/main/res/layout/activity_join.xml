@@ -30,7 +30,7 @@
             android:typeface="monospace"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:textSize="36sp"
+            android:textSize="24sp"
             android:padding="20dp" />
 
         <Button
@@ -48,7 +48,7 @@
             android:typeface="monospace"
             android:layout_above="@+id/host_button"
             android:layout_alignParentStart="true"
-            android:textSize="36sp"
+            android:textSize="24sp"
             android:padding="20dp" />
 
     </RelativeLayout>
