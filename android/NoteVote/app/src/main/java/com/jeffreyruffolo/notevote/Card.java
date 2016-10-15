@@ -6,12 +6,14 @@ package com.jeffreyruffolo.notevote;
 
 public class Card {
     private String song_name;
+    private String rep_score;
     private String artist_name;
     private String image_url;
     private String song_id;
 
-    public Card(String song_name, String artist_name, String image_url, String song_id) {
+    public Card(String song_name, String artist_name, String image_url, String song_id, String rep_score) {
         this.song_name = song_name;
+        this.rep_score = rep_score;
         this.artist_name = artist_name;
         this.image_url = image_url;
         this.song_id = song_id;
@@ -19,6 +21,10 @@ public class Card {
 
     public String getSong() {
         return song_name;
+    }
+
+    public String get_rep_score(){
+        return rep_score;
     }
 
     public String getArtist() {

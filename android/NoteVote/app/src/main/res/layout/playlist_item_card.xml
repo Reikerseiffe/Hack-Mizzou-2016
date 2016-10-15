@@ -36,8 +36,9 @@
                     android:layout_height="wrap_content"
                     android:text="song"
                     android:textStyle="normal|bold"
-                    android:textSize="20sp"
-                    android:textAlignment="textStart" />
+                    android:textSize="16sp"
+                    android:textAlignment="textStart"
+                    android:maxWidth="200dp" />
 
                 <TextView
                     android:id="@+id/artist_name"
@@ -45,7 +46,8 @@
                     android:layout_height="wrap_content"
                     android:text="artist"
                     android:textAlignment="textStart"
-                    android:textSize="16sp" />
+                    android:textSize="14sp"
+                    android:maxWidth="200dp" />
             </LinearLayout>
 
             <Space
@@ -53,24 +55,34 @@
                 android:layout_height="50dp"
                 android:layout_weight="1" />
 
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rep_score"
+                android:layout_weight="0"
+                android:textSize="36sp"
+                android:textAlignment="center"
+                android:typeface="monospace"
+                android:padding="10dp" />
+
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="50dp"
-                android:layout_height="70dp">
+                android:layout_width="35dp"
+                android:layout_height="60dp">
 
                 <ImageButton
                     android:layout_width="match_parent"
-                    app:srcCompat="@android:drawable/arrow_up_float"
                     android:id="@+id/song_up_vote"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:layout_height="35dp" />
+                    android:elevation="0dp"
+                    android:src="@mipmap/up_vote"
+                    android:layout_height="30dp" />
 
                 <ImageButton
                     android:layout_width="match_parent"
-                    app:srcCompat="@android:drawable/arrow_down_float"
                     android:id="@+id/song_down_vote"
-                    android:backgroundTint="@color/colorAccent"
-                    android:layout_height="35dp" />
+                    android:layout_height="30dp"
+                    android:src="@mipmap/down_vote" />
 
             </LinearLayout>
 

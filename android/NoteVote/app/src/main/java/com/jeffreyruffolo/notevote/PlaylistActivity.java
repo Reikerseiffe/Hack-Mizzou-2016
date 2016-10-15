@@ -90,28 +90,23 @@ public class PlaylistActivity extends AppCompatActivity {
                                 String artist_name = item.getString("vcArtist");
                                 String image_url = item.getString("vcCoverArt");
                                 String song_id = Integer.toString(i);
+                                String rep_score = item.getString("nRepScore");
 
 
                                 if(i == 0){
-                                    add_current_card(current_cardArrayAdapter, song_name, artist_name, image_url, song_id);
+                                    add_current_card(current_cardArrayAdapter, song_name, artist_name, image_url, song_id, rep_score);
                                 }
                                 else{
-                                    add_playlist_card(playlist_cardArrayAdapter, song_name, artist_name, image_url, song_id);
+                                    add_playlist_card(playlist_cardArrayAdapter, song_name, artist_name, image_url, song_id, rep_score);
                                 }
                             }
 
                             current_listView.setAdapter(current_cardArrayAdapter);
                             playlist_listView.setAdapter(playlist_cardArrayAdapter);
 
-
-
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
-
-
                     }
                 },
                 new Response.ErrorListener()
@@ -119,7 +114,7 @@ public class PlaylistActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // error
-                        System.out.println("oh no error");
+
                     }
                 }
         ) {
@@ -136,13 +131,15 @@ public class PlaylistActivity extends AppCompatActivity {
 
     }
 
-    void add_current_card(CurrentArrayAdapter a, String song_name, String artist_name, String image_url, String song_id){
-        Card card = new Card(song_name, artist_name, image_url, song_id);
+    void add_current_card(CurrentArrayAdapter a, String song_name, String artist_name,
+                          String image_url, String song_id, String rep_score){
+        Card card = new Card(song_name, artist_name, image_url, song_id, rep_score);
         a.add(card);
     }
 
-    void add_playlist_card(CardArrayAdapter a, String song_name, String artist_name, String image_url, String song_id){
-        Card card = new Card(song_name, artist_name, image_url, song_id);
+    void add_playlist_card(CardArrayAdapter a, String song_name, String artist_name,
+                           String image_url, String song_id, String rep_score){
+        Card card = new Card(song_name, artist_name, image_url, song_id, rep_score);
         a.add(card);
     }
 }

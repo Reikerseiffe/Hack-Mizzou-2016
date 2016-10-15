@@ -37,6 +37,7 @@ public class CardArrayAdapter  extends ArrayAdapter<Card> {
 
     static class CardViewHolder {
         String song_id;
+        TextView rep_score;
         TextView song_name;
         TextView artist_name;
         ImageButton up_vote;
@@ -74,6 +75,7 @@ public class CardArrayAdapter  extends ArrayAdapter<Card> {
             LayoutInflater inflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(R.layout.playlist_item_card, parent, false);
             viewHolder = new CardViewHolder();
+            viewHolder.rep_score = (TextView) row.findViewById(R.id.rep_score);
             viewHolder.song_name = (TextView) row.findViewById(R.id.song_name);
             viewHolder.artist_name = (TextView) row.findViewById(R.id.artist_name);
             viewHolder.up_vote = (ImageButton) row.findViewById(R.id.song_up_vote);
@@ -84,6 +86,7 @@ public class CardArrayAdapter  extends ArrayAdapter<Card> {
         }
         Card card = getItem(position);
         viewHolder.song_id = card.get_song_id();
+        viewHolder.rep_score.setText(card.get_rep_score());
         viewHolder.song_name.setText(card.getSong());
         viewHolder.artist_name.setText(card.getArtist());
 

@@ -18,6 +18,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true">
 
+        <TextView
+            android:text="Enter a Song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            android:layout_marginBottom="10dp" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +48,9 @@
             android:listSelector="@android:color/transparent"
             android:cacheColorHint="@android:color/transparent"
             android:divider="@null"
-            android:dividerHeight="10dp" />
+            android:dividerHeight="10dp"
+            android:paddingLeft="-16dp"
+            android:paddingRight="-16dp" />
 
     </LinearLayout>
 </RelativeLayout>

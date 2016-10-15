@@ -35,7 +35,9 @@
             android:listSelector="@android:color/white"
             android:cacheColorHint="@android:color/transparent"
             android:divider="@null"
-            android:dividerHeight="10dp" />
+            android:dividerHeight="10dp"
+            android:paddingBottom="65dp"
+            android:clipToPadding="false" />
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
@@ -50,8 +52,7 @@
         app:fabSize="normal"
         android:layout_width="wrap_content"
         app:rippleColor="@android:color/holo_orange_light"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@drawable/plus_icon" />
 
 
 </android.support.design.widget.CoordinatorLayout>

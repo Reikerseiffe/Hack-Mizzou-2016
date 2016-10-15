@@ -43,7 +43,7 @@ public class SearchActivity extends AppCompatActivity {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     if(search_text.getText().length() > 0) {
                         String query = search_text.getText().toString().replace(' ', '+');
-                        refreshSearch(query, 10);
+                        refreshSearch(query, 20);
                     }
 
                     return true;
@@ -70,14 +70,14 @@ public class SearchActivity extends AppCompatActivity {
                             searchArrayAdapter = new SearchArrayAdapter(getApplicationContext(), R.layout.search_item_card,
                                     room_name, SearchActivity.this);
 
-                            for (int i = 0; i < 10; i++) {
+                            for (int i = 0; i < 20; i++) {
                                 JSONObject item = reader.getJSONObject("tracks").getJSONArray("items").getJSONObject(i);
                                 String song = item.getString("name");
                                 String artist = item.getJSONArray("artists").getJSONObject(0).getString("name");
                                 String image_url = item.getJSONObject("album").getJSONArray("images").getJSONObject(0).getString("url");
                                 String song_id = item.getString("id");
 
-                                Card card = new Card(song, artist, image_url, song_id);
+                                Card card = new Card(song, artist, image_url, song_id, "");
                                 searchArrayAdapter.add(card);
                             }
                             listView.setAdapter(searchArrayAdapter);
