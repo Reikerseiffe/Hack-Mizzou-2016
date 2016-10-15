@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D6C4C10C1DB1B6C4008B6B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C10B1DB1B6C4008B6B9C /* AppDelegate.swift */; };
+		D6C4C10E1DB1B6C4008B6B9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C10D1DB1B6C4008B6B9C /* ViewController.swift */; };
+		D6C4C1111DB1B6C4008B6B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C4C10F1DB1B6C4008B6B9C /* Main.storyboard */; };
+		D6C4C1141DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1121DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodeld */; };
+		D6C4C1161DB1B6C4008B6B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C4C1151DB1B6C4008B6B9C /* Assets.xcassets */; };
+		D6C4C1191DB1B6C4008B6B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C4C1171DB1B6C4008B6B9C /* LaunchScreen.storyboard */; };
+		D6C4C1211DB1C45E008B6B9C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1201DB1C45E008B6B9C /* LandingViewController.swift */; };
+		D6C4C1231DB1C4EB008B6B9C /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1221DB1C4EB008B6B9C /* CreateRoomViewController.swift */; };
+		D6C4C1251DB1C533008B6B9C /* JoinRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1241DB1C533008B6B9C /* JoinRoomViewController.swift */; };
+		D6C4C1271DB1C564008B6B9C /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1261DB1C564008B6B9C /* SongListViewController.swift */; };
+		D6C4C1291DB1C5A4008B6B9C /* SongCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1281DB1C5A4008B6B9C /* SongCellController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D6C4C1081DB1B6C4008B6B9C /* Hack Mizzou 2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hack Mizzou 2016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6C4C10B1DB1B6C4008B6B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6C4C10D1DB1B6C4008B6B9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6C4C1101DB1B6C4008B6B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D6C4C1131DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hack_Mizzou_2016.xcdatamodel; sourceTree = "<group>"; };
+		D6C4C1151DB1B6C4008B6B9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6C4C1181DB1B6C4008B6B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D6C4C11A1DB1B6C4008B6B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C4C1201DB1C45E008B6B9C /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		D6C4C1221DB1C4EB008B6B9C /* CreateRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
+		D6C4C1241DB1C533008B6B9C /* JoinRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinRoomViewController.swift; sourceTree = "<group>"; };
+		D6C4C1261DB1C564008B6B9C /* SongListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
+		D6C4C1281DB1C5A4008B6B9C /* SongCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCellController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6C4C1051DB1B6C4008B6B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D6C4C0FF1DB1B6C4008B6B9C = {
+			isa = PBXGroup;
+			children = (
+				D6C4C10A1DB1B6C4008B6B9C /* Hack Mizzou 2016 */,
+				D6C4C1091DB1B6C4008B6B9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D6C4C1091DB1B6C4008B6B9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4C1081DB1B6C4008B6B9C /* Hack Mizzou 2016.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6C4C10A1DB1B6C4008B6B9C /* Hack Mizzou 2016 */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4C10B1DB1B6C4008B6B9C /* AppDelegate.swift */,
+				D6C4C10D1DB1B6C4008B6B9C /* ViewController.swift */,
+				D6C4C10F1DB1B6C4008B6B9C /* Main.storyboard */,
+				D6C4C1151DB1B6C4008B6B9C /* Assets.xcassets */,
+				D6C4C1171DB1B6C4008B6B9C /* LaunchScreen.storyboard */,
+				D6C4C11A1DB1B6C4008B6B9C /* Info.plist */,
+				D6C4C1121DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodeld */,
+				D6C4C1201DB1C45E008B6B9C /* LandingViewController.swift */,
+				D6C4C1221DB1C4EB008B6B9C /* CreateRoomViewController.swift */,
+				D6C4C1241DB1C533008B6B9C /* JoinRoomViewController.swift */,
+				D6C4C1261DB1C564008B6B9C /* SongListViewController.swift */,
+				D6C4C1281DB1C5A4008B6B9C /* SongCellController.swift */,
+			);
+			path = "Hack Mizzou 2016";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6C4C1071DB1B6C4008B6B9C /* Hack Mizzou 2016 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6C4C11D1DB1B6C4008B6B9C /* Build configuration list for PBXNativeTarget "Hack Mizzou 2016" */;
+			buildPhases = (
+				D6C4C1041DB1B6C4008B6B9C /* Sources */,
+				D6C4C1051DB1B6C4008B6B9C /* Frameworks */,
+				D6C4C1061DB1B6C4008B6B9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hack Mizzou 2016";
+			productName = "Hack Mizzou 2016";
+			productReference = D6C4C1081DB1B6C4008B6B9C /* Hack Mizzou 2016.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6C4C1001DB1B6C4008B6B9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Reiker R Seiffe";
+				TargetAttributes = {
+					D6C4C1071DB1B6C4008B6B9C = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = D6C4C1031DB1B6C4008B6B9C /* Build configuration list for PBXProject "Hack Mizzou 2016" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6C4C0FF1DB1B6C4008B6B9C;
+			productRefGroup = D6C4C1091DB1B6C4008B6B9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6C4C1071DB1B6C4008B6B9C /* Hack Mizzou 2016 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6C4C1061DB1B6C4008B6B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6C4C1191DB1B6C4008B6B9C /* LaunchScreen.storyboard in Resources */,
+				D6C4C1161DB1B6C4008B6B9C /* Assets.xcassets in Resources */,
+				D6C4C1111DB1B6C4008B6B9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6C4C1041DB1B6C4008B6B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6C4C1271DB1C564008B6B9C /* SongListViewController.swift in Sources */,
+				D6C4C10E1DB1B6C4008B6B9C /* ViewController.swift in Sources */,
+				D6C4C10C1DB1B6C4008B6B9C /* AppDelegate.swift in Sources */,
+				D6C4C1211DB1C45E008B6B9C /* LandingViewController.swift in Sources */,
+				D6C4C1141DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodeld in Sources */,
+				D6C4C1231DB1C4EB008B6B9C /* CreateRoomViewController.swift in Sources */,
+				D6C4C1291DB1C5A4008B6B9C /* SongCellController.swift in Sources */,
+				D6C4C1251DB1C533008B6B9C /* JoinRoomViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D6C4C10F1DB1B6C4008B6B9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6C4C1101DB1B6C4008B6B9C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D6C4C1171DB1B6C4008B6B9C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6C4C1181DB1B6C4008B6B9C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D6C4C11B1DB1B6C4008B6B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6C4C11C1DB1B6C4008B6B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6C4C11E1DB1B6C4008B6B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Hack Mizzou 2016/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reikerseiffe.Hack-Mizzou-2016";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D6C4C11F1DB1B6C4008B6B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Hack Mizzou 2016/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reikerseiffe.Hack-Mizzou-2016";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6C4C1031DB1B6C4008B6B9C /* Build configuration list for PBXProject "Hack Mizzou 2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6C4C11B1DB1B6C4008B6B9C /* Debug */,
+				D6C4C11C1DB1B6C4008B6B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6C4C11D1DB1B6C4008B6B9C /* Build configuration list for PBXNativeTarget "Hack Mizzou 2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6C4C11E1DB1B6C4008B6B9C /* Debug */,
+				D6C4C11F1DB1B6C4008B6B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D6C4C1121DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6C4C1131DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodel */,
+			);
+			currentVersion = D6C4C1131DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodel */;
+			path = Hack_Mizzou_2016.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D6C4C1001DB1B6C4008B6B9C /* Project object */;
+}
