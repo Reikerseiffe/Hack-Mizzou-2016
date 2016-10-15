@@ -201,8 +201,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJc-zC-ZbZ">
-                                                    <rect key="frame" x="28" y="65" width="49" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJc-zC-ZbZ">
+                                                    <rect key="frame" x="27" y="65" width="50" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -218,6 +218,9 @@
                                                     <state key="normal" title="DN">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="voteDown:" destination="uEA-rO-LVd" eventType="touchUpInside" id="Dpc-IQ-p8I"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYb-aS-bCy">
                                                     <rect key="frame" x="517" y="25" width="50" height="50"/>
@@ -229,6 +232,9 @@
                                                     <state key="normal" title="UP">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="voteUp:" destination="uEA-rO-LVd" eventType="touchUpInside" id="FiI-Jw-Ldw"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -245,8 +251,19 @@
                                                 <constraint firstItem="Mqk-lp-Eod" firstAttribute="top" secondItem="hmg-kA-KZL" secondAttribute="bottom" constant="5" id="yQA-UM-PCi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="Mqk-lp-Eod" id="qvu-9Q-nFo"/>
+                                            <outlet property="downButton" destination="QDZ-3f-9qg" id="JA8-ah-cuC"/>
+                                            <outlet property="scoreLabel" destination="KJc-zC-ZbZ" id="R16-OV-eei"/>
+                                            <outlet property="songLabel" destination="hmg-kA-KZL" id="9z8-4j-7Zd"/>
+                                            <outlet property="upButton" destination="tYb-aS-bCy" id="E5G-v5-NrK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TO1-A3-mx4" id="pqD-I8-1sK"/>
+                                    <outlet property="delegate" destination="TO1-A3-mx4" id="KRG-QX-fZc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -260,6 +277,13 @@
                             <constraint firstItem="1FH-YK-OYW" firstAttribute="top" secondItem="V09-cb-At5" secondAttribute="bottom" id="yEq-Z9-3El"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentArtistLabel" destination="z65-Vi-zms" id="dBN-di-qYg"/>
+                        <outlet property="currentArtwork" destination="T5q-8I-sni" id="AA0-Vf-Iun"/>
+                        <outlet property="currentScoreLabel" destination="36z-eV-uDq" id="eh2-L1-5Tt"/>
+                        <outlet property="currentSongLabel" destination="cNi-2a-LdJ" id="nN0-LF-GT8"/>
+                        <outlet property="tableView" destination="5F1-68-QUd" id="Qdo-F6-SEM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="106-U7-MAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -66,6 +66,9 @@
 		D6C4C10A1DB1B6C4008B6B9C /* Hack Mizzou 2016 */ = {
 			isa = PBXGroup;
 			children = (
+				D6C4C12E1DB1CFC1008B6B9C /* workers */,
+				D6C4C12D1DB1CFAA008B6B9C /* viewControllers */,
+				D6C4C12C1DB1CF9E008B6B9C /* cells */,
 				D6C4C10B1DB1B6C4008B6B9C /* AppDelegate.swift */,
 				D6C4C10D1DB1B6C4008B6B9C /* ViewController.swift */,
 				D6C4C10F1DB1B6C4008B6B9C /* Main.storyboard */,
@@ -73,13 +76,34 @@
 				D6C4C1171DB1B6C4008B6B9C /* LaunchScreen.storyboard */,
 				D6C4C11A1DB1B6C4008B6B9C /* Info.plist */,
 				D6C4C1121DB1B6C4008B6B9C /* Hack_Mizzou_2016.xcdatamodeld */,
+			);
+			path = "Hack Mizzou 2016";
+			sourceTree = "<group>";
+		};
+		D6C4C12C1DB1CF9E008B6B9C /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4C1281DB1C5A4008B6B9C /* SongCellController.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		D6C4C12D1DB1CFAA008B6B9C /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				D6C4C1201DB1C45E008B6B9C /* LandingViewController.swift */,
 				D6C4C1221DB1C4EB008B6B9C /* CreateRoomViewController.swift */,
 				D6C4C1241DB1C533008B6B9C /* JoinRoomViewController.swift */,
 				D6C4C1261DB1C564008B6B9C /* SongListViewController.swift */,
-				D6C4C1281DB1C5A4008B6B9C /* SongCellController.swift */,
 			);
-			path = "Hack Mizzou 2016";
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		D6C4C12E1DB1CFC1008B6B9C /* workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
