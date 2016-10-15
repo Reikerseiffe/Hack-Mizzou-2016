@@ -1,0 +1,41 @@
+.container{
+    margin-top: 5%;
+}
+
+.imageOffset{
+    padding-left: 25px;
+}
+
+.btnColor{
+    background-color: #5D4F8C;
+    color: #E67F3D;
+    font-weight: bold;
+}
+
+#tableElement{
+    vertical-align: middle;
+}
+
+.extBtn{
+    margin: 15px;
+}
+
+.btnAlign{
+    display: inline;
+}
+
+div{
+    color: #5D4F8C;
+}
+h3{
+    color: #5D4F8C;
+}
+#playlistLogo{
+    float: right;
+    margin: 10px;
+}
+.bannerTag{
+    width: 359px;
+    height: 135px;  
+    
+}
