@@ -25,7 +25,7 @@ class SongListViewController: UIViewController {
         "currentSong" : "Roses",
         "currentArtist" : "The Chain Smokers",
         "currentScore" : 42,
-        "currentArtwork" : "https://www.google.com/search?q=album+cover+roses&espv=2&biw=1920&bih=1103&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi66Y-h5tvPAhWk24MKHaq9AxwQ_AUIBigB#imgrc=YQeLV0hH6mpJfM%3A"
+        "currentArtwork" : "http://www.sweatshirtxy.com/sites/default/files/styles/large/public/hoodie-images/dj-band-chainsmokers-hoodie-for-teens-xxxl-fleece-roses-album-sweatshirt-hood87938.jpg?itok=spG629cm"
     ]
     
     let fakeData2: NSDictionary = [
@@ -53,12 +53,26 @@ class SongListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*if let url = NSURL(string:String(fakeData["currentArtwork"])) {
+            if let data = NSData(contentsOfURL: url) {
+                currentArtwork.image = UIImage(data: data)
+            }
+        }*/
+        
+        let data = NSData(contentsOfURL: NSURL(string: "https://i.scdn.co/image/f9f7089f2c94487175fcbc5f883fcd2c5037c9cd")!)
+        print(data);
+        if let data = data{
+            currentArtwork.image = UIImage(data: data)
+        }
+        
+        
+        
         dataArray = [fakeData2, fakeData3, fakeData4]
         
         currentSongLabel.text = fakeData["currentSong"] as? String
         currentArtistLabel.text = fakeData["currentArtist"] as? String
         if let score:String = String(fakeData["currentScore"]!){
-            currentScoreLabel.text = score
+            currentScoreLabel.text = "Score: " + score
         }
         
         
