@@ -16,6 +16,7 @@ class SongListViewController: UIViewController {
     @IBOutlet weak var currentScoreLabel: UILabel!
     @IBOutlet weak var currentArtwork: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomView: UIView!
     
     let webWorker = WebWorker()
     
@@ -27,14 +28,18 @@ class SongListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("After Segue")
-        print(songArray)
+        //print("After Segue")
+        //print(songArray)
         
         let data = NSData(contentsOfURL: NSURL(string: (songArray[0]["vcCoverArt"] as! String))!)
         //print(data);
         if let data = data{
             currentArtwork.image = UIImage(data: data)
         }
+        
+        //bottomView.layer.borderWidth = 2
+        //bottomView.layer.borderColor = UIColor.blackColor().CGColor
+        
         
         
         currentSongLabel.text = songArray[0]["vcName"] as? String
@@ -46,7 +51,6 @@ class SongListViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(SongListViewController.reloadData), name:UIApplicationWillEnterForegroundNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SongListViewController.loadList(_:)),name:"load", object: nil)
-        
 
         // Do any additional setup after loading the view.
     }

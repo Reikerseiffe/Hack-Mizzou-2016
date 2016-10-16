@@ -19,6 +19,10 @@
 		D6C4C1271DB1C564008B6B9C /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1261DB1C564008B6B9C /* SongListViewController.swift */; };
 		D6C4C1291DB1C5A4008B6B9C /* SongCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1281DB1C5A4008B6B9C /* SongCellController.swift */; };
 		D6C4C1301DB1EEE6008B6B9C /* WebWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C12F1DB1EEE6008B6B9C /* WebWorker.swift */; };
+		D6C4C14C1DB29AFD008B6B9C /* DownVote.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C4C14A1DB29AFD008B6B9C /* DownVote.png */; };
+		D6C4C14D1DB29AFD008B6B9C /* UpVote.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C4C14B1DB29AFD008B6B9C /* UpVote.png */; };
+		D6C4C14F1DB29CAC008B6B9C /* NOTEVOTE_tag.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C4C14E1DB29CAC008B6B9C /* NOTEVOTE_tag.png */; };
+		D6C4C1531DB2A8C9008B6B9C /* NewSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4C1521DB2A8C9008B6B9C /* NewSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		D6C4C1261DB1C564008B6B9C /* SongListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
 		D6C4C1281DB1C5A4008B6B9C /* SongCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCellController.swift; sourceTree = "<group>"; };
 		D6C4C12F1DB1EEE6008B6B9C /* WebWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebWorker.swift; sourceTree = "<group>"; };
+		D6C4C14A1DB29AFD008B6B9C /* DownVote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownVote.png; sourceTree = "<group>"; };
+		D6C4C14B1DB29AFD008B6B9C /* UpVote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpVote.png; sourceTree = "<group>"; };
+		D6C4C14E1DB29CAC008B6B9C /* NOTEVOTE_tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NOTEVOTE_tag.png; sourceTree = "<group>"; };
+		D6C4C1521DB2A8C9008B6B9C /* NewSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,9 @@
 		D6C4C10A1DB1B6C4008B6B9C /* Hack Mizzou 2016 */ = {
 			isa = PBXGroup;
 			children = (
+				D6C4C14E1DB29CAC008B6B9C /* NOTEVOTE_tag.png */,
+				D6C4C14A1DB29AFD008B6B9C /* DownVote.png */,
+				D6C4C14B1DB29AFD008B6B9C /* UpVote.png */,
 				D6C4C12E1DB1CFC1008B6B9C /* workers */,
 				D6C4C12D1DB1CFAA008B6B9C /* viewControllers */,
 				D6C4C12C1DB1CF9E008B6B9C /* cells */,
@@ -97,6 +108,7 @@
 				D6C4C1221DB1C4EB008B6B9C /* CreateRoomViewController.swift */,
 				D6C4C1241DB1C533008B6B9C /* JoinRoomViewController.swift */,
 				D6C4C1261DB1C564008B6B9C /* SongListViewController.swift */,
+				D6C4C1521DB2A8C9008B6B9C /* NewSongViewController.swift */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -168,7 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C4C1191DB1B6C4008B6B9C /* LaunchScreen.storyboard in Resources */,
+				D6C4C14C1DB29AFD008B6B9C /* DownVote.png in Resources */,
 				D6C4C1161DB1B6C4008B6B9C /* Assets.xcassets in Resources */,
+				D6C4C14D1DB29AFD008B6B9C /* UpVote.png in Resources */,
+				D6C4C14F1DB29CAC008B6B9C /* NOTEVOTE_tag.png in Resources */,
 				D6C4C1111DB1B6C4008B6B9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C4C1531DB2A8C9008B6B9C /* NewSongViewController.swift in Sources */,
 				D6C4C1271DB1C564008B6B9C /* SongListViewController.swift in Sources */,
 				D6C4C10E1DB1B6C4008B6B9C /* ViewController.swift in Sources */,
 				D6C4C10C1DB1B6C4008B6B9C /* AppDelegate.swift in Sources */,

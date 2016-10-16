@@ -22,6 +22,8 @@ class JoinRoomViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.roomInput.keyboardType = UIKeyboardType.NumberPad
 
         // Do any additional setup after loading the view.
     }

@@ -43,7 +43,7 @@ class WebWorker: NSObject {
             (let data, let response, let error) in
             //print("Ran the request and the data was: \(data)")
             if (data != nil) {
-                print(data)
+                //print(data)
                 //print("Ran the request and the data was: \(data)")
             }
         
@@ -82,10 +82,86 @@ class WebWorker: NSObject {
 
     
     
-    func searchSong(){
-    
+    func searchSong(track:String, completion: (result:NSArray?, error:String?)->Void){
+        
+        let url = NSURL(string: "https://api.spotify.com/v1/search?q=\(track)&type=track&market=US")
+        print(url!)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+            
+            if (data != nil) {
+                //print("Ran the request and the data was: \(data)")
+                self.parseJSON(data!){
+                    (result:NSArray?, error:String?) in
+                    print("Got the JSON array back 2: \(result)")
+                    completion(result:result, error:error)
+                }
+            }else{
+                print("Data was nil")
+                completion(result:nil, error:String(error))
+                
+            }
+            
+        }
+        
+        task.resume()
+        
+        
+        
+        /*let url = "https://api.spotify.com/v1/search?q=\(track)&type=track&market=US" //build a request for a URL
+        
+        print(url)
+        
+        self.spotifyRequestHandler(url, post: ""){
+            (result:NSArray?, error:String?) in
+            if let result = result{
+                print("got a result: " + String(result));
+                completion(result:result, error:error)
+            }
+        }*/
     }
     
+    
+    func spotifyRequestHandler(url:String, post:String, completion: (result:NSArray?, error:String?)->Void){
+        //let postData: NSData = post.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)!
+        //let postLength: String = "\(postData.length)"
+        //let request: NSMutableURLRequest = NSMutableURLRequest()
+        //request.URL = NSURL(string: url)
+        //request.HTTPMethod = "GET"
+        //request.setValue(postLength, forHTTPHeaderField: "Content-Length")
+        //request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        //request.HTTPBody = postData
+        
+        let url = NSURL(string:url)
+        
+        //let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+           // print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+        //}
+        
+        //task.resume()
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
+            (let data, let response, let error) in
+            //print("Ran the request and the data was: \(data)")
+            if (data != nil) {
+                //print("Ran the request and the data was: \(data)")
+                self.parseJSON(data!){
+                    (result:NSArray?, error:String?) in
+                    print("Got the JSON array back 1: \(result)")
+                    completion(result:result, error:error)
+                }
+            }else{
+                print("Data was nil")
+                completion(result:nil, error:String(error))
+            }
+            
+        }
+        
+        task.resume()// run the call
+        
+    }
+
     
     
     
