@@ -40,6 +40,7 @@ class RoomController extends Controller
     }
 
     public function joinRoom(Request $request){
+        //TODO add redirect for invalid room number
         $roomID = $request->vcRoomName;
 
         $request->session()->put('roomID', $roomID);

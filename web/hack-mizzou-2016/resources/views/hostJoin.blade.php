@@ -1,7 +1,7 @@
 @extends('index') @section('mainContent')
 
 <div class="container">
-    <div class="text-center"><img src="IMG/NOTEVOTE_tag.png" alt="NOTEVOTELOGO" width="520.5" height="337.5" class="imageOffset"></div>
+    <div class="text-center"><img src="IMG/NOTEVOTE_tag.png" alt="NOTEVOTELOGO" width="513.75" height="300" class="imageOffset"></div>
     
     <br>
     <br>
