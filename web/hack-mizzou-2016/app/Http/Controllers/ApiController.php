@@ -16,7 +16,7 @@ class ApiController extends Controller
 {
     public function upvote(Request $request){
 
-    	$session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-42-199-153.us-west-2.compute.amazonaws.com/auth');
+    	$session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-25-40-198.us-west-2.compute.amazonaws.com/auth');
         $api = new SpotifyWebAPI();
 
     	//$roomID = $request->roomID;
@@ -64,7 +64,7 @@ class ApiController extends Controller
 
     public function downvote(Request $request){
 
-    	$session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-42-199-153.us-west-2.compute.amazonaws.com/auth');
+    	$session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-25-40-198.us-west-2.compute.amazonaws.com/auth');
         $api = new SpotifyWebAPI();
 
     	$roomID = (int)$request->session()->get('roomID');
@@ -117,7 +117,7 @@ class ApiController extends Controller
 
     public function addSong(Request $request){
 
-    	$session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-42-199-153.us-west-2.compute.amazonaws.com/auth');
+    	$session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-25-40-198.us-west-2.compute.amazonaws.com/auth');
         $api = new SpotifyWebAPI();
 
 
