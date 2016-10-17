@@ -17,7 +17,7 @@ class RoomController extends Controller
      */
     public function index()
     {
-        $session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-42-199-153.us-west-2.compute.amazonaws.com/auth');
+        $session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-25-40-198.us-west-2.compute.amazonaws.com/auth');
 
         $scopes = ['playlist-read-private', 'playlist-modify-private'];
         $state = 'authState';
@@ -55,7 +55,7 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        $session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-42-199-153.us-west-2.compute.amazonaws.com/auth');
+        $session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-25-40-198.us-west-2.compute.amazonaws.com/auth');
         $api = new SpotifyWebAPI();
 
         // Request a access token using the code from Spotify
@@ -104,7 +104,7 @@ class RoomController extends Controller
     public function show(Request $request)
     {
 
-        $session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-42-199-153.us-west-2.compute.amazonaws.com/auth');
+        $session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-25-40-198.us-west-2.compute.amazonaws.com/auth');
         $api = new SpotifyWebAPI();
 
 

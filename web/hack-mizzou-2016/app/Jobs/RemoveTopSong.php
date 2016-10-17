@@ -34,7 +34,7 @@ class RemoveTopSong implements ShouldQueue
      */
     public function handle()
     {
-        $session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-42-199-153.us-west-2.compute.amazonaws.com/auth');
+        $session = new Session(env('CLIENT_ID'), env('CLIENT_SECRET'), 'http://ec2-52-25-40-198.us-west-2.compute.amazonaws.com/auth');
         $api = new SpotifyWebAPI();
         $api->setAccessToken($this->room->vcAccessToken);
 
