@@ -51,7 +51,7 @@
         app:layout_anchorGravity="bottom|right|end"
         app:fabSize="normal"
         android:layout_width="wrap_content"
-        app:rippleColor="@android:color/holo_orange_light"
+        app:rippleColor="@color/colorAccent"
         android:src="@drawable/plus_icon" />
 
 
